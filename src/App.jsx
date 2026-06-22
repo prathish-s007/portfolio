@@ -93,8 +93,8 @@ function MainLayout({ theme, toggleTheme }) {
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
   const [theme, setTheme] = useState(() => {
-    // Default to dark theme as required
-    return localStorage.getItem('theme') || 'dark';
+    // Default to light theme as default
+    return localStorage.getItem('theme') || 'light';
   });
 
   // Track cursor position window-wide for radial spotlight effects
