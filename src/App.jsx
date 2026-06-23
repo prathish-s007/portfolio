@@ -92,10 +92,7 @@ function MainLayout({ theme, toggleTheme }) {
 // Router root wrapper for scalable production routing & theme config
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
-  const [theme, setTheme] = useState(() => {
-    // Default to light theme as default
-    return localStorage.getItem('theme') || 'light';
-  });
+  const [theme, setTheme] = useState('light');
 
   // Track cursor position window-wide for radial spotlight effects
   useEffect(() => {
