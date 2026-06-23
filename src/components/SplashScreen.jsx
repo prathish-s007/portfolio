@@ -15,8 +15,8 @@ export default function SplashScreen({ onComplete }) {
     const startTyping = () => {
       typingTimer = setInterval(() => {
         if (index < fullText.length) {
-          setTypedText((prev) => prev + fullText.charAt(index));
           index++;
+          setTypedText(fullText.substring(0, index));
         } else {
           clearInterval(typingTimer);
         }
