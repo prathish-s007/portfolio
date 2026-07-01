@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX, FiGithub, FiLinkedin, FiSun, FiMoon } from 'react-icons/fi';
 import { navLinks, personalInfo } from '../data/portfolioData';
-import Button from './Button';
 
 export default function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
@@ -106,7 +105,7 @@ export default function Navbar({ theme, toggleTheme }) {
 
             <div className="h-4 w-[1px] bg-border-main" />
 
-            {/* Dark/Light Mode & CTA */}
+            {/* Dark/Light Mode */}
             <div className="flex items-center gap-4">
               {/* Theme Toggle Button */}
               <motion.button
@@ -118,14 +117,6 @@ export default function Navbar({ theme, toggleTheme }) {
               >
                 {theme === 'dark' ? <FiSun size={18} /> : <FiMoon size={18} />}
               </motion.button>
-
-              <Button 
-                variant="glass" 
-                size="sm"
-                onClick={(e) => handleLinkClick(e, '#contact')}
-              >
-                Hire Me
-              </Button>
             </div>
           </div>
 
@@ -181,16 +172,6 @@ export default function Navbar({ theme, toggleTheme }) {
                   );
                 })}
               </ul>
-
-              <div className="w-full max-w-xs h-[1px] bg-border-main my-2" />
-              
-              <Button 
-                variant="primary" 
-                className="w-full max-w-xs"
-                onClick={(e) => handleLinkClick(e, '#contact')}
-              >
-                Hire Me
-              </Button>
             </div>
           </motion.div>
         )}
